@@ -9,7 +9,7 @@
 		<xpath>*/ThingDef[@Name = "BodyPartProstheticBase"]/recipeMaker</xpath>
 		<value>
 		  <recipeUsers>
-			<li>TableSyrProsthetics</li>
+				<li>TableSyrProsthetics</li>
 		  </recipeUsers>
 		</value>
 	</Operation>
@@ -22,7 +22,7 @@
 		<xpath>*/ThingDef[@Name = "BodyPartBionicBase"]/recipeMaker</xpath>
 		<value>
 		  <recipeUsers Inherit="False">
-			<li>TableSyrProsthetics</li>
+				<li>TableSyrProsthetics</li>
 		  </recipeUsers>
 		</value>
 	</Operation>
