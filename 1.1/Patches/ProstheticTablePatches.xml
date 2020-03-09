@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationRemove">
+		<xpath>*/ThingDef[@Name = "BodyPartProstheticMakeableBase"]/recipeMaker/recipeUsers</xpath>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[@Name = "BodyPartProstheticMakeableBase"]/recipeMaker</xpath>
+		<value>
+		  <recipeUsers>
+				<li>TableSyrProsthetics</li>
+		  </recipeUsers>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationRemove">
+		<xpath>*/ThingDef[@Name = "BodyPartBionicBase"]/recipeMaker/recipeUsers</xpath>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>*/ThingDef[@Name = "BodyPartBionicBase"]/recipeMaker</xpath>
+		<value>
+		  <recipeUsers Inherit="False">
+				<li>TableSyrProsthetics</li>
+		  </recipeUsers>
+		</value>
+	</Operation>
+	
+	<!-- Orassans -->
+	<Operation Class="PatchOperationSequence">
+    <success>Always</success>
+	
+	  <operations>
+		<li Class="PatchOperationTest">
+			<xpath>Defs/ThingDef[defName = "BionicTail"]</xpath>
+		</li>
+	
+		<li Class="PatchOperationRemove">
+			<xpath>*/ThingDef[defName = "BionicTail"]/recipeMaker/recipeUsers</xpath>
+		</li>
+		
+		<li Class="PatchOperationAdd">
+			<xpath>*/ThingDef[defName = "BionicTail"]/recipeMaker</xpath>
+			<value>
+			  <recipeUsers Inherit="False">
+				<li>TableSyrProsthetics</li>
+			  </recipeUsers>
+			</value>
+		</li>
+	  </operations>
+	</Operation>
+
+</Patch>
