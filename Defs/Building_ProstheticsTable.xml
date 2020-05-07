@@ -4,7 +4,7 @@
   <ThingDef ParentName="BenchBase">
     <defName>TableSyrProsthetics</defName>
     <label>prosthetics table</label>
-    <description>A work station for crafting prosthetics of all kinds.</description>
+    <description>A work station for crafting prosthetics of all kinds. Make sure you actually know how to craft any prosthetics before using this workbench.</description>
     <thingClass>Building_WorkTable</thingClass>
     <graphicData>
       <texPath>Things/Building/Production/TableProsthetics</texPath>
@@ -68,7 +68,7 @@
     </building>
     <constructEffect>ConstructMetal</constructEffect>
     <researchPrerequisites>
-      <li>Prosthetics</li>
+      <li>Machining</li>
     </researchPrerequisites>
     <designationHotKey>Misc7</designationHotKey>
     <placeWorkers>
