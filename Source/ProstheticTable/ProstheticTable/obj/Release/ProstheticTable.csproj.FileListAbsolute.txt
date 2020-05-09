@@ -1,4 +1,0 @@
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SYR_ProstheticTable\1.1\Assemblies\ProstheticsTable.dll
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SYR_ProstheticTable\Source\ProstheticTable\ProstheticTable\obj\Release\ProstheticTable.csprojAssemblyReference.cache
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SYR_ProstheticTable\Source\ProstheticTable\ProstheticTable\obj\Release\ProstheticTable.csproj.CoreCompileInputs.cache
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SYR_ProstheticTable\Source\ProstheticTable\ProstheticTable\obj\Release\ProstheticsTable.dll
