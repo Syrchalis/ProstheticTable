@@ -22,13 +22,20 @@ namespace ProstheticsTable
         static RecipeTransfer()
         {
             IEnumerable<RecipeDef> prostheticRecipes = from x in DefDatabase<RecipeDef>.AllDefs
-                where x.AllRecipeUsers.Any(ru => ru == ProstheticsTableDefOf.TableMachining || ru == ProstheticsTableDefOf.FabricationBench) && x.products.Any(p => p.thingDef.isTechHediff)
+                where x.AllRecipeUsers?.Any(ru => ru == ProstheticsTableDefOf.TableMachining || ru == ProstheticsTableDefOf.FabricationBench) ?? false && x.products.Any(p => p.thingDef.isTechHediff)
                 select x;
             if (!prostheticRecipes.EnumerableNullOrEmpty())
             {
                 foreach (RecipeDef recipeDef in prostheticRecipes)
                 {
-                    recipeDef.recipeUsers.Clear();
+                    if (recipeDef.recipeUsers.NullOrEmpty())
+                    {
+                        recipeDef.recipeUsers = new List<ThingDef>();
+                    }
+                    else
+                    {
+                        recipeDef.recipeUsers.Clear();
+                    }
                     recipeDef.recipeUsers.Add(ProstheticsTableDefOf.TableSyrProsthetics);
                     recipeDef.ResolveReferences();
                 }
