@@ -4,13 +4,13 @@
   
   <WorkGiverDef>
     <defName>DoBillsProstheticsTable</defName>
-	<label>Craft prosthetic</label>
+	  <label>Craft prosthetic</label>
     <giverClass>WorkGiver_DoBill</giverClass>
-    <workType>Crafting</workType>
-    <priorityInType>100</priorityInType>
+    <workType>Smithing</workType>
+    <priorityInType>75</priorityInType>
     <fixedBillGiverDefs>
-	  <li>TableSyrProsthetics</li>
-	</fixedBillGiverDefs>
+	    <li>TableSyrProsthetics</li>
+	  </fixedBillGiverDefs>
     <verb>work</verb>
     <gerund>working at</gerund>
     <requiredCapacities>
